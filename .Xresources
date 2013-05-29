@@ -1,0 +1,69 @@
+#include "/home/michael/.colors/fallac"
+
+! -- Cursor Theme --
+Xcursor.theme: Adwaita
+
+! #########################################
+urxvt.termName: rxvt-unicode
+urxvt*perl-lib:			/usr/lib/urxvt/perl
+urxvt*perl-ext-common:		default,matcher,clipboard,tabbed
+urxvt*perl-matcher: 		1
+urxvt*matcher-button: 		1
+urxvt*urlLauncher:		/usr/bin/chromium
+urxvt*cursorUnderline: 1
+!urxvt*letterspace: -1
+urxvt*fading: 			10
+urxvt*fadeColor: 		#000000	
+urxvt*cursorBlink:		true
+urxvt*scrollBar:		false
+urxvt*depth:		32
+
+urxvt*font: xft:SourceCodePro-Regular:pixelsize=12
+!urxvt*font: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+
+!urxvt*font: -*-SourceCodePro-Regular-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-SourceCodePro-Regular-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-SourceCodePro-Regular-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-SourceCodePro-Regular-*-*-*-*-*-*-*-*-*-*-*-*
+
+!urxvt*font: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+
+!urxvt*font: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
+
+!urxvt*font: -*-tamsyn-medium-r-normal-*-*-87-*-*-*-*-*-*
+!urxvt*boldFont: -*-tamsyn-bold-r-normal-*-*-87-*-*-*-*-*-*
+!urxvt*italicFont: -*-tamsyn-medium-r-normal-*-*-87-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-tamsyn-bold-r-normal-*-*-87-*-*-*-*-*-*
+
+!urxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-terminus-bold-r-normal-*-12-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-terminus-bold-r-normal-*-12-*-*-*-*-*-*-*
+
+!urxvt*font: xft:inconsolata:size=11
+!urxvt*boldFont: xft:inconsolata:bold:size=11
+!urxvt*italicFont: xft:inconsolata:italic:size=11
+!urxvt*font: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*font: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*boldFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*italicFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*bolditalicFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*font: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-* !urxvt*boldFont: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-* !urxvt*italicFont: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-*
+
+!Xft.dpi:	72
+Xft.dpi:	96
+Xft.rgba:	rgb
+Xft.antialias: 	true
+Xft.hinting: 	true
+Xft.autohint: 	false
+Xft.hintstyle: 	hintslight
+Xft.lcdfilter: 	lcddefault
