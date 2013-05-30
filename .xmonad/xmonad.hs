@@ -162,7 +162,7 @@ main = do
 		,((mod4Mask  			, xK_n), spawn "urxvtc -title ncmpcpp -name ncmpcpp -e ncmpcpp")
 		,((mod4Mask  			, xK_a), spawn "urxvtc -title alsamixer -name alsamixer -e alsamixer")
 		,((mod4Mask  			, xK_M), spawn "urxvtc -title centerim -name centerim -e centerim")
-		,((mod1Mask 			, xK_r), spawn "/home/michael/scripts/lens")
+		,((mod4Mask 			, xK_r), spawn "dmenu_run")
 		,((mod1Mask .|. shiftMask	, xK_r), spawn "/home/michael/scripts/dmenu/spotlight")
 		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky; killall tint2; cd ~/.xmonad; ghc -threaded xmonad.hs; mv xmonad xmonad-x86_64-linux; xmonad --restart" )
 		,((mod1Mask .|. shiftMask	, xK_i), spawn "xcalib -invert -alter")
