@@ -149,6 +149,7 @@ main = do
 		,((mod1Mask  			, xK_p), moveTo Prev NonEmptyWS)
 		,((mod1Mask  			, xK_n), moveTo Next NonEmptyWS)
 		,((mod1Mask  			, xK_c), moveTo Next EmptyWS)
+		,((mod4Mask  			, xK_l), spawn "slock") 
 		,((mod1Mask .|. shiftMask	, xK_l), sendMessage MirrorShrink)
 		,((mod1Mask .|. shiftMask	, xK_h), sendMessage MirrorExpand)
 		,((mod1Mask  			, xK_a), withFocused (keysMoveWindow (-20,0)))
