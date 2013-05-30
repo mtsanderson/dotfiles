@@ -109,7 +109,6 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 					"Circle"			->	"^i(/home/michael/.xmonad/dzen2/full.xbm)"
 					_				->	"^i(/home/michael/.xmonad/dzen2/grid.xbm)"
 				) 
---		, ppTitle	=   wrap "^ca(1,xdotool key alt+shift+x)^fg(#7e7175)^i(/home/michael/.xmonad/dzen2/corner_left.xbm)^bg(#7e7175)^fg(#f92671)^fn(fkp)x^fn()" "^fg(#7e7175)^i(/home/michael/.xmonad/dzen2/corner_right.xbm)^ca()" .  dzenColor foreground "#7e7175" . shorten 40 . pad		
 		, ppTitle	=  wrap "^ca(1,xdotool key alt+shift+x)^fg(#D23D3D)^fn(fkp)x ^fn()" "^ca()" . dzenColor foreground background . shorten 40 . pad
 		, ppOrder	=  \(ws:l:t:_) -> [ws,l, t]
 		, ppOutput	=   hPutStrLn h
@@ -121,17 +120,10 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 --------------------------------------------------------------------------------------------------------------------
 myXmonadBar = "dzen2 -x '0' -y '0' -h '14' -w '500' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
 myStatusBar = "conky -qc /home/michael/.xmonad/.conky_dzen | dzen2 -x '500' -w '1420' -h '14' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
---myConky = "conky -c /home/michael/conkyrc"
---myStartMenu = "/home/michael/.xmonad/start /home/michael/.xmonad/start_apps"
-
 
 main = do
 	dzenLeftBar 	<- spawnPipe myXmonadBar
 	dzenRightBar	<- spawnPipe myStatusBar
---	xmproc 		<- spawnPipe "GTK2_RC_FILES=/home/michael/.gtkdocky /usr/bin/docky"
---	xmproc 		<- spawnPipe "tint2 -c /home/michael/.config/tint2/xmonad.tint2rc"
---	conky 		<- spawn myConky
---	dzenStartMenu	<- spawnPipe myStartMenu
 	xmonad $ ewmh defaultConfig
 		{ terminal		= myTerminal
 		, borderWidth		= 3
@@ -150,18 +142,11 @@ main = do
 -- Keyboard options
 --------------------------------------------------------------------------------------------------------------------
 		`additionalKeys`
-		[((mod1Mask .|. shiftMask	, xK_b), spawn "chromium")
-		,((mod1Mask  			, xK_b), spawn "dwb")
-		,((mod1Mask .|. shiftMask	, xK_n), spawn "xterm")
-		,((mod1Mask .|. shiftMask  	, xK_t), spawn "urxvtc -e tmux")
+		[((mod4Mask			, xK_b), spawn "google-chrome")
+		,((mod4Mask			, xK_t), spawn "urxvtc")
 		,((mod4Mask  			, xK_z), spawn "zathura")
 		,((mod4Mask  			, xK_w), spawn "lowriter")
 		,((mod4Mask  			, xK_c), spawn "localc")
-		,((mod4Mask  			, xK_m), spawn "urxvtc -title mutt -name mutt -e muttb")
-		,((mod4Mask  			, xK_i), spawn "urxvtc -title irssi -name irssi -e irssi")
-		,((mod4Mask  			, xK_n), spawn "urxvtc -title ncmpcpp -name ncmpcpp -e ncmpcpp")
-		,((mod4Mask  			, xK_a), spawn "urxvtc -title alsamixer -name alsamixer -e alsamixer")
-		,((mod4Mask  			, xK_M), spawn "urxvtc -title centerim -name centerim -e centerim")
 		,((mod4Mask 			, xK_r), spawn "dmenu_run")
 		,((mod1Mask .|. shiftMask	, xK_r), spawn "/home/michael/scripts/dmenu/spotlight")
 		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky; killall tint2; cd ~/.xmonad; ghc -threaded xmonad.hs; mv xmonad xmonad-x86_64-linux; xmonad --restart" )
@@ -204,13 +189,6 @@ main = do
 		,((0                     	, xF86XK_AudioNext), spawn "ncmpcpp next")
 		,((0                     	, xF86XK_AudioPrev), spawn "ncmpcpp prev")
 		]
-		`additionalMouseBindings`
-		[((mod1Mask			, 6), (\_ -> moveTo Next NonEmptyWS))
-		,((mod1Mask			, 7), (\_ -> moveTo Prev NonEmptyWS))
-		,((mod1Mask			, 5), (\_ -> moveTo Prev NonEmptyWS))
-		,((mod1Mask			, 4), (\_ -> moveTo Next NonEmptyWS))
-		]
-
 
 
 -- Define constants
