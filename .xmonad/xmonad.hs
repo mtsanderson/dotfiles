@@ -193,16 +193,8 @@ main = do
 myTerminal 	= "urxvtc"
 myBitmapsDir	= "~/.xmonad/dzen2/"
 
---myFont		= "-*-terminus-medium-*-normal-*-9-*-*-*-*-*-*-*"
---myFont		= "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
-myFont		= "-*-limey-*-*-*-*-*-*-*-*-*-*-*-*"
---myFont		= "-benis-lemon-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
---myFont		= "'sans:italic:bold:underline'"
---myFont		= "xft:droid sans mono:size=9"
---myFont		= "xft:Droxd Sans:size=12"
---myFont		= "-*-cure-*-*-*-*-*-*-*-*-*-*-*-*"
-
-
+--myFont		= "-*-limey-*-*-*-*-*-*-*-*-*-*-*-*"
+myFont		= "xft:SourceCodePro-Light:size=9"
 
 background= "#181512"
 foreground= "#bea492"
