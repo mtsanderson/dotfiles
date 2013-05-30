@@ -146,7 +146,6 @@ main = do
 		,((mod4Mask  			, xK_w), spawn "lowriter")
 		,((mod4Mask  			, xK_c), spawn "localc")
 		,((mod4Mask 			, xK_r), spawn "dmenu_run")
-		,((mod1Mask .|. shiftMask	, xK_r), spawn "/home/michael/scripts/dmenu/spotlight")
 		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky; killall tint2; cd ~/.xmonad; ghc -threaded xmonad.hs; mv xmonad xmonad-x86_64-linux; xmonad --restart" )
 		,((mod1Mask .|. shiftMask	, xK_i), spawn "xcalib -invert -alter")
 		,((mod1Mask .|. shiftMask	, xK_x), kill)
