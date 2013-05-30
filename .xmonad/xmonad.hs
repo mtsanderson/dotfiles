@@ -169,16 +169,6 @@ main = do
 		,((mod1Mask  			, xK_F5), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_battery.sh")
 		,((mod1Mask  			, xK_F6), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_hardware.sh")
 		,((mod1Mask  			, xK_F7), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_log.sh")
-		,((0 	 			, xK_Print), spawn "scrot & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
-		,((mod1Mask 	 		, xK_Print), spawn "scrot -s & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
-		,((0                     	, xF86XK_AudioLowerVolume), spawn "amixer set Master 2- & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
-		,((0                     	, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2+ & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
-		,((0                     	, xF86XK_AudioMute), spawn "amixer set Master toggle")
-		,((0                     	, xF86XK_Display), spawn "/home/michael/scripts/project")
-		,((0                     	, xF86XK_Sleep), spawn "pm-suspend")
-		,((0                     	, xF86XK_AudioPlay), spawn "ncmpcpp toggle")
-		,((0                     	, xF86XK_AudioNext), spawn "ncmpcpp next")
-		,((0                     	, xF86XK_AudioPrev), spawn "ncmpcpp prev")
 		]
 
 
