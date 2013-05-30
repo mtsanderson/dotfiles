@@ -57,8 +57,6 @@ myLayout = onWorkspace (myWorkspaces !! 0) (avoidStruts (tiledSpace ||| tiled) |
 -- WORKSPACE DEFINITIONS
 --------------------------------------------------------------------------------------------------------------------
 myWorkspaces = clickable $ ["I","II","III","IV"]
-		--,"V"
-		--,"VI"]	
 	where clickable l = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
 				(i,ws) <- zip [1..] l,
 				let n = i ]
