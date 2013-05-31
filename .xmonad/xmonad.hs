@@ -35,10 +35,11 @@ import Data.List			-- clickable workspaces
 --------------------------------------------------------------------------------------------------------------------
 -- DECLARE WORKSPACES RULES
 --------------------------------------------------------------------------------------------------------------------
-myLayout = onWorkspace (myWorkspaces !! 0) (avoidStruts (tiledSpace ||| tiled) ||| fullTile)
-		$ onWorkspace (myWorkspaces !! 1) (avoidStruts (tiledSpace ||| fullTile) ||| fullScreen)
-		$ onWorkspace (myWorkspaces !! 2) (avoidStruts (simplestFloat))
-		$ avoidStruts ( tiledSpace  ||| tiled ||| fullTile ) 
+--myLayout = onWorkspace (myWorkspaces !! 0) (avoidStruts (tiledSpace ||| tiled) ||| fullTile)
+--		$ onWorkspace (myWorkspaces !! 1) (avoidStruts (tiledSpace ||| fullTile) ||| fullScreen)
+--		$ onWorkspace (myWorkspaces !! 2) (avoidStruts (simplestFloat))
+--		$ avoidStruts ( tiledSpace  ||| tiled ||| fullTile ) 
+myLayout = avoidStruts (tiled ||| tiledSpace ||| fullTile)
 	where
 		tiled  		= spacing 5 $ ResizableTall nmaster delta ratio [] 
 		tiledSpace  	= spacing 60 $ ResizableTall nmaster delta ratio [] 
