@@ -31,7 +31,6 @@ import XMonad.Util.Run (spawnPipe)
 import XMonad.Actions.CycleWS			-- nextWS, prevWS
 import Data.List			-- clickable workspaces
 
-
 --------------------------------------------------------------------------------------------------------------------
 -- DECLARE WORKSPACES RULES
 --------------------------------------------------------------------------------------------------------------------
@@ -66,25 +65,8 @@ myWorkspaces = clickable $ ["I","II","III","IV"]
 -- APPLICATION SPECIFIC RULES
 --------------------------------------------------------------------------------------------------------------------
 myManageHook = composeAll 	[ resource =? "dmenu" --> doFloat
-				, resource =? "skype" 	--> doFloat
-				, resource =? "mplayer"	--> doFloat
-				, resource =? "steam"	--> doFloat
-				, resource =? "hl2_linux" --> doFloat
-				, resource =? "feh"	--> doIgnore
 				, resource =? "dzen2"	--> doIgnore
-				, resource =? "transmission"	--> doShift (myWorkspaces !! 2)
-				, resource =? "thunar"	--> doShift (myWorkspaces !! 2)
-				, resource =? "chromium"--> doShift (myWorkspaces !! 1)
-				, resource =? "lowriter"--> doShift (myWorkspaces !! 3)
-				, resource =? "localc"--> doShift (myWorkspaces !! 3)
-				, resource =? "loimpress"--> doShift (myWorkspaces !! 3)
-				, resource =? "zathura"--> doShift (myWorkspaces !! 3)
-				, resource =? "ario"--> doShift (myWorkspaces !! 4)
-				, resource =? "ncmpcpp"--> doShift (myWorkspaces !! 4)
-				, resource =? "alsamixer"--> doShift (myWorkspaces !! 4)
-				, resource =? "mutt"--> doShift (myWorkspaces !! 5)
-				, resource =? "irssi"--> doShift (myWorkspaces !! 5)
-				, resource =? "centerim"--> doShift (myWorkspaces !! 5)
+				, stringProperty "WM_WINDOW_ROLE" =? "pop-up" --> doFloat
 				, manageDocks]
 newManageHook = myManageHook <+> manageHook defaultConfig 
 
