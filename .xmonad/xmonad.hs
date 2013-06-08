@@ -29,6 +29,7 @@ import qualified XMonad.StackSet as W
 import qualified XMonad.Actions.FlexibleResize as FlexibleResize
 import XMonad.Util.Run (spawnPipe)
 import XMonad.Actions.CycleWS			-- nextWS, prevWS
+import XMonad.Actions.Warp
 import Data.List			-- clickable workspaces
 
 --------------------------------------------------------------------------------------------------------------------
@@ -67,6 +68,7 @@ myWorkspaces = clickable $ ["I","II","III","IV"]
 myManageHook = composeAll 	[ resource =? "dmenu" --> doFloat
 				, resource =? "dzen2"	--> doIgnore
 				, stringProperty "WM_WINDOW_ROLE" =? "pop-up" --> doFloat
+				, isFullscreen --> (doF W.focusDown <+> doFullFloat)
 				, manageDocks]
 newManageHook = myManageHook <+> manageHook defaultConfig 
 
