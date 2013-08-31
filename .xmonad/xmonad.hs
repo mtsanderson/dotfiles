@@ -125,9 +125,10 @@ main = do
 -- Keyboard options
 --------------------------------------------------------------------------------------------------------------------
 		`additionalKeys`
-		--[((mod4Mask			, xK_b), spawn "google-chrome")
-		[((mod4Mask			, xK_b), spawn "chromium")
+		[((mod4Mask			, xK_b), spawn "google-chrome")
+	--	[((mod4Mask			, xK_b), spawn "chromium")
 		,((mod4Mask			, xK_t), spawn "urxvtc")
+		,((mod4Mask			, xK_e), spawn "thunar")
 		,((mod4Mask 			, xK_r), spawn "dmenu_run")
 		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky; killall tint2; cd ~/.xmonad; ghc -threaded xmonad.hs; mv xmonad xmonad-x86_64-linux; xmonad --restart" )
 		,((mod1Mask .|. shiftMask	, xK_x), kill)
