@@ -1,5 +1,6 @@
 xrdb ~/.Xresources 
 xset +fp /usr/share/fonts/local 
+xset +fp ~/.fonts/ 
 xset fp rehash 
 xset b off
 nvidia-settings -l &
