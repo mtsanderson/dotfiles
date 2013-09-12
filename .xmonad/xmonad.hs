@@ -57,7 +57,7 @@ myLayout = avoidStruts (tiled ||| tiledSpace ||| fullTile)
 --------------------------------------------------------------------------------------------------------------------
 -- WORKSPACE DEFINITIONS
 --------------------------------------------------------------------------------------------------------------------
-myWorkspaces = clickable $ ["I","II","III","IV","V","VI"]
+myWorkspaces = clickable $ ["I","II","III","IV"]
 	where clickable l = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
 				(i,ws) <- zip [1..] l,
 				let n = i ]
@@ -165,8 +165,8 @@ main = do
 myTerminal 	= "urxvtc"
 myBitmapsDir	= "~/.xmonad/dzen2/"
 
---myFont		= "-*-limey-*-*-*-*-*-*-*-*-*-*-*-*"
-myFont		= "xft:SourceCodePro-Light:size=9"
+myFont		= "-*-limey-*-*-*-*-*-*-*-*-*-*-*-*"
+-- myFont		= "xft:SourceCodePro-Light:size=9"
 
 background= "#181512"
 foreground= "#bea492"
