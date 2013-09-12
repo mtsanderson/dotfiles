@@ -9,6 +9,7 @@ xsetroot -cursor_name left_ptr &
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
 urxvtd &
+thunar --daemon &
 
 #compton -cbC
 exec dbus-launch xmonad
