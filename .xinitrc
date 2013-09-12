@@ -1,5 +1,5 @@
 xrdb ~/.Xresources 
-xset +fp /usr/share/fonts/local 
+#xset +fp /usr/share/fonts/local 
 xset +fp ~/.fonts/ 
 xset fp rehash 
 xset b off
@@ -12,4 +12,4 @@ urxvtd &
 thunar --daemon &
 
 #compton -cbC
-exec dbus-launch xmonad
+exec dbus-launch i3
