@@ -18,7 +18,7 @@ pathdirs=(
 
 for dir in $pathdirs; do
   if [ -d $dir ]; then
-    PATH+=$dir
+    PATH+=':'$dir
   fi
 done
 
