@@ -10,5 +10,5 @@ Requirements:
 + gmrun
 + xdotool
 + tint2
-+ nitrogen
++ feh 
 + compton
