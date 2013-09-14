@@ -4,12 +4,14 @@ xset +fp ~/.fonts/
 xset fp rehash 
 xset b off
 #nvidia-settings -l &
-nitrogen --restore &
+#nitrogen --restore &
 xsetroot -cursor_name left_ptr &
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
 urxvtd &
 thunar --daemon &
+sxhkd &
 
 #compton -cbC
-exec dbus-launch i3
+exec bspwm 
+#exec dbus-launch bspwm 
