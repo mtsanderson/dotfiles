@@ -1,5 +1,28 @@
 *.swp
-.xmonad/xmonad-x86_64-linux
-.xmonad/xmonad.o
-.xmonad/xmonad.errors
-.xmonad/xmonad.hi
+*.hi
+*.chi
+*.chs.h
+.virthualenv
+*.errors
+xmonad-x86_64-linux
+*.o
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Vim
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
