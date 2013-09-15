@@ -1,12 +1,9 @@
-#include "/home/michael/.colors/fallac"
-
-! -- Cursor Theme --
-Xcursor.theme: Adwaita
+#include "/home/michael/.colors/gohucolor"
 
 ! #########################################
 urxvt.termName: rxvt-unicode
 urxvt*perl-lib:			/usr/lib/urxvt/perl
-urxvt*perl-ext-common:		default,matcher,clipboard,tabbed
+urxvt*perl-ext-common:		default,matcher,clipboard
 urxvt*perl-matcher: 		1
 urxvt*matcher-button: 		1
 urxvt*urlLauncher:		/usr/bin/google-chrome
@@ -18,23 +15,15 @@ urxvt*cursorBlink:		true
 urxvt*scrollBar:		false
 urxvt*depth:		32
 
-urxvt*font: xft:SourceCodePro-Regular:pixelsize=12
-!urxvt*font: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*boldFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*italicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt*font: xft:uushi:pixelsize=12
+URxvt*boldFont: xft:uushi:pixelsize=12
 
-!urxvt*font: -*-SourceCodePro-Regular-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*boldFont: -*-SourceCodePro-Regular-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*italicFont: -*-SourceCodePro-Regular-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*bolditalicFont: -*-SourceCodePro-Regular-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*font: xft:lemon:pixelsize=12
+!URxvt*boldFont: xft:lemon:pixelsize=12
 
-!urxvt*font: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*boldFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*italicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*font: xft:limey:pixelsize=12
+!URxvt*boldFont: xft:limey:pixelsize=12
 
-!Xft.dpi:	72
 Xft.dpi:	96
 Xft.rgba:	rgb
 Xft.antialias: 	true
