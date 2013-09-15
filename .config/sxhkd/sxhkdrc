@@ -4,11 +4,23 @@
 
 # Exit bspwm
 alt + shift + q 
-    bspc quit
+    bspc quit && pkill bar
+
+# reload panel
+alt + q 
+    killall bar && panel &
 
 # Close window
 alt + shift + x
     bspc window -c
+
+# swap active monitors
+alt + {h,l}
+    bspc monitor -f {prev,next}
+
+# switch to next/prev monitor -OR- move selected window to next/prev monitor 
+alt + {_,shift + }{h,l}
+    bspc {monitor -f,window -m} {prev, next} 
 
 # cycle layouts
 alt +space 
@@ -38,10 +50,6 @@ alt + Return
 alt + {n,p}
     bspc desktop -f {next,prev}
 
-# no idea what this does yet =)
-alt + ctrl + {h,j,k,l}
-    bspc window -p {left,down,up,right}
-
 # window ratio split
 alt + ctrl + {1-9}
     bspc window -r 0.{1-9}
@@ -49,10 +57,6 @@ alt + ctrl + {1-9}
 # move selected window to selected workspace
 alt + {_,shift + }{1-5}
     bspc {desktop -f,window -d} {I,II,III,IV,V}
-
-# switch to the numbered workspace
-alt + {1-5}
-    bspc desktop -f {i,ii,iii,iv,v}
 
 ~button1
     bspc pointer -g focus
@@ -73,13 +77,16 @@ super + t
     urxvtc
 
 super + r
-    dmenu_run
+    dmenu_run -nb '#0D131A' -nf '#8A9499' 
 
 super + l 
-    slock
+    slock 
 
 super + b
     google-chrome
+
+super + space
+    finder
 
 # make sxhkd reload its configuration files:
 alt + Escape
