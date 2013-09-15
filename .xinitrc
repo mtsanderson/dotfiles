@@ -16,4 +16,4 @@ sxhkd &
 #
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
-exec bspwm -s "$PANEL_FIFO" -p W 2> ~/.baspwm.log
+exec bspwm -s "$PANEL_FIFO" -p W
