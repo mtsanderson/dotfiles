@@ -3,7 +3,7 @@
 #
 
 # Exit bspwm
-super + alt + Escape
+alt + shift + q 
     bspc quit
 
 # Close window
@@ -48,7 +48,7 @@ alt + ctrl + {1-9}
 
 # move selected window to selected workspace
 alt + {_,shift + }{1-5}
-    bspc {desktop -f,window -d} {i,ii,iii,iv,v}
+    bspc {desktop -f,window -d} {I,II,III,IV,V}
 
 # switch to the numbered workspace
 alt + {1-5}
