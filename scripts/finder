@@ -1,0 +1,2 @@
+#!/bin/bash
+find ~/ | sed 's/ /\\ /g' | sort -f | dmenu -i -l 20 -nb '#0D131A' -nf '#8A9499' | xargs exo-open
