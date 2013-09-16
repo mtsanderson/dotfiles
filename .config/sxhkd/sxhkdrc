@@ -88,6 +88,9 @@ super + b
 super + space
     finder
 
+super + e
+    thunar
+
 # make sxhkd reload its configuration files:
 alt + Escape
     pkill -USR1 -x sxhkd
