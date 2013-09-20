@@ -64,5 +64,3 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
-
-au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
