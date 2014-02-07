@@ -11,7 +11,7 @@ fc-cache
 xset b off
 
 #nvidia-settings -l &
-feh --bg-scale ~/wallpapers/geo.jpg
+feh --bg-scale ~/wallpapers/blue.jpg
 xsetroot -cursor_name left_ptr &
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
 #compton -cCb -fD 5 -r 5 -o 0.5 -l 2 -t 2 &
