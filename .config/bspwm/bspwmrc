@@ -1,26 +1,9 @@
 #! /bin/sh
 
-FIRST_DESK_MAIN=i
-REMAINING_DESKS_MAIN="ii iii iv v vi vii viii ix x"
-FIRST_DESK_SECONDARY=I
-REMAINING_DESKS_SECONDARY="II III IV V VI VII VIII IX X"
+bspc monitor -d I II II IV
 
-MONITORS_ASSOCIATED=`bspc query -M | wc -l` 
-if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
-	#No monitor connected
-        bspc desktop ^1 -n $FIRST_DESK_MAIN
-        bspc monitor -a $REMAINING_DESKS_MAIN
-        bspc config top_padding 14
-else
-        bspc desktop ^1 -n $FIRST_DESK_SECONDARY
-        bspc monitor -a $REMAINING_DESKS_SECONDARY
-
-        bspc monitor -f next
-
-        bspc desktop Desktop2 -n $FIRST_DESK_MAIN
-        bspc monitor -a $REMAINING_DESKS_MAIN
-        bspc config -m VGA1 top_padding 14
-fi
+#Padding on top
+bspc config top_padding 14
 
 # Visual options
 bspc config split_ratio         0.50
@@ -38,11 +21,7 @@ bspc config presel_border_color "#9a875f"
 bspc config urgent_border_color "#504339"
 bspc config normal_frame_opacity 0.0
 bspc config focused_frame_opacity 0.05
-bspc config rule_command "$(which rule_command)"
 
 # Rules
-rulc -a 'class=="BSPWM_FRAME"' 'frame=on'
-rulc -a 'class=="Conky"' 'sticky=on,manage=off,lower=on'
-rulc -a 'class=="feh"' 'floating=on,manage=off'
 
 panel &
