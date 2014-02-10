@@ -3,7 +3,7 @@ background yes
 out_to_console yes
 out_to_x no
 # Update interval in seconds
-update_interval 5
+update_interval 1
 
 TEXT
-\f3${mem} \f4of\f3 ${memmax} \c\f7${time %H:%M}\r \f5UnixHub: \f4${rss http://forums.unixhub.net/syndication.php 1 item_titles 1}
+\f3${mem} \f4of\f3 ${memmax} \c\f7${time %H:%M}\r \f3Temp: ${execi 60 ~/scripts/getweather.py --zipcode 76201}${if_mpd_playing}\f5 | Now Playing: \f4${exec mpc current} $endif
