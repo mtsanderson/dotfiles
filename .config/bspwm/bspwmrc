@@ -1,6 +1,6 @@
 #! /bin/sh
 
-bspc monitor -d I II II IV
+bspc monitor -d I II III IV
 
 #Padding on top
 bspc config top_padding 14
@@ -14,9 +14,9 @@ bspc config gapless_monocle     true
 bspc config focus_follows_pointer true
 bspc config auto_alternate true
 bspc config auto_cancel true
-bspc config normal_border_color "#504339"
-bspc config active_border_color "#504339"
-bspc config focused_border_color "#605655"
+bspc config normal_border_color "#0D131A"
+bspc config active_border_color "#0D131A"
+bspc config focused_border_color "#738080"
 bspc config presel_border_color "#9a875f"
 bspc config urgent_border_color "#504339"
 bspc config normal_frame_opacity 0.0
