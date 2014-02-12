@@ -14,15 +14,11 @@ alt + q
 alt + shift + x
     bspc window -c
 
-# swap active monitors
-alt + {h,l}
-    bspc monitor -f {prev,next}
+# swap active monitors or move active window to next monitor
+alt + {_,shift +} w 
+    bspc {monitor -f,window -m} next
 
-# switch to next/prev monitor -OR- move selected window to next/prev monitor 
-alt + {_,shift + }{h,l}
-    bspc {monitor -f,window -m} {prev, next} 
-
-# cycle layouts
+# monocle 
 alt +space 
     bspc desktop -l next
 
@@ -32,7 +28,7 @@ alt + {j,k}
 
 # Cycle window to next/previous space
 alt + shift {j,k}
-    bspc desktop -C {backward,forward}
+    bspc desktop -C {forward,backward}
 
 # balance tree
 alt + b
@@ -69,12 +65,39 @@ alt + button{1-3}
 alt + !button{1-3}
     bspc pointer -t %i %i
 
+# Resize nodes
+alt + {Right,Left}
+    S={+,-}; bspc window -e right $\{S\}20 || bspc window -e left $\{S\}20
+
+alt + {Down,Up}
+    S={+,-}; bspc window -e up $\{S\}20 || bspc window -e down $\{S\}20
+
+# Mirror and flip
+alt + {comma,period}
+    bspc desktop -F {horizontal,vertical}
+
+alt + {minus,equal}
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 10 ))
+
 #
 # wm independent hotkeys
 #
 
+# Toggle play/pause music
+F7
+    mpc toggle
+
+# Previous or next song in playlist
+{F6,F8}
+    mpc {prev,next}
+
+# Increase or decrease volume by 10
+{F9,F10}
+    mpc volume {-10,+10}
+
+# Launch urxvt client with transparency
 super + t
-    urxvtc
+    urxvtc -depth 32 -bg rgba:0D00/1300/1A00/ee00
 
 super + r
     dmenu_run -nb '#0D131A' -nf '#8A9499' 
