@@ -1,6 +1,20 @@
+pcm.usb {
+    type hw
+    card Icicle
+}
+
 pcm.!default {
-    type plug
-    slave.pcm "dmixer"
+    type asym
+    playback.pcm
+    {
+      type plug
+      slave.pcm "dmixer"
+    }
+    capture.pcm
+    {
+      type plug
+      slave.pcm "usb"
+    }
 }
 
 pcm.dmixer  {
