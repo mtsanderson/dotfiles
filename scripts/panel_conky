@@ -6,4 +6,4 @@ out_to_x no
 update_interval 1
 
 TEXT
-\f3${mem} \f4of\f3 ${memmax} \c\f7${time %H:%M}\r \f3Temp: ${execi 60 ~/scripts/getweather.py --zipcode 76201}${if_mpd_playing}\f5 | Now Playing: \f4${exec mpc current} $endif
+\f3${mem} \f4of\f3 ${memmax} \c\f7${time %H:%M}\r \f3Temp: ${execi 30 ~/scripts/getweather.sh}F${if_mpd_playing}\f5 | Now Playing: \f4${exec mpc current} $endif
