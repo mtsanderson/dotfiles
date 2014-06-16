@@ -15,14 +15,23 @@ urxvt*cursorBlink:		true
 urxvt*scrollBar:		false
 urxvt*depth:		32
 
-URxvt*font: xft:uushi:pixelsize=12
-URxvt*boldFont: xft:uushi:pixelsize=12
+!urxvt*font: -*-uushi-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-uushi-*-*-*-*-*-*-*-*-*-*-*-*
 
-!URxvt*font: xft:lemon:pixelsize=12
-!URxvt*boldFont: xft:lemon:pixelsize=12
+!urxvt*font: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
 
-!URxvt*font: xft:limey:pixelsize=12
-!URxvt*boldFont: xft:limey:pixelsize=12
+!urxvt*font: -*-dash-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-dash-*-*-*-*-*-*-*-*-*-*-*-*
+
+!urxvt*font: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+
+urxvt*font: -*-GohuFontMod11-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*boldFont: -*-GohuFontMod11-*-*-*-*-*-*-*-*-*-*-*-*
+
+!urxvt*font: -*-cure-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-cure-*-*-*-*-*-*-*-*-*-*-*-*
 
 Xft.dpi:	96
 Xft.rgba:	rgb
