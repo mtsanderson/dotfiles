@@ -100,7 +100,7 @@ super + t
     urxvtc -depth 32 -bg rgba:0D00/1300/1A00/ee00
 
 super + r
-    dmenu_run -nb '#0D131A' -nf '#8A9499' 
+    dmenu_run -nb '#0D131A' -nf '#8A9499' -sb '#1C678C'
 
 super + l 
     slock 
