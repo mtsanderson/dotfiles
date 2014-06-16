@@ -1,14 +1,15 @@
 #! /bin/sh
 
-bspc monitor -d I II III IV
+bspc monitor -d I II III IV V
 
 #Padding on top
-bspc config top_padding 14
+bspc config -m DVI-0 top_padding 14
+bspc config -m DVI-1 top_padding 0
 
 # Visual options
 bspc config split_ratio         0.50
 bspc config border_width        2
-bspc config window_gap          12
+bspc config window_gap          5
 bspc config borderless_monocle  true
 bspc config gapless_monocle     true
 bspc config focus_follows_pointer true
@@ -23,9 +24,14 @@ bspc config normal_frame_opacity 0.0
 bspc config focused_frame_opacity 0.05
 
 # Rules
+
+# Hangouts
+bspc rule -a "crx_nckgahadagoaajjgafhacjanaoi" floating=on
+
 bspc rule -a Thunar floating=on
+bspc rule -a Pidgin floating=on
 bspc rule -a VirtualBox desktop=^2
 bspc rule -a feh floating=on manage=off
 bspc rule -a Deadbeef floating=on
 
-panel &
+#panel &
