@@ -1,10 +1,10 @@
 #! /bin/sh
 
-bspc monitor -d I II III IV V
+bspc monitor -d Main Web VM Misc
 
 #Padding on top
-bspc config -m DFP1 top_padding 14
-bspc config -m DFP2 top_padding 0
+bspc config -m DVI-1 top_padding 14
+bspc config -m DVI-0 top_padding 0
 
 # Visual options
 bspc config split_ratio         0.50
