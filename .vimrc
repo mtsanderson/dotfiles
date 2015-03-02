@@ -1,5 +1,21 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.fzf
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/syntastic'
+Bundle 'https://github.com/Townk/vim-autoclose'
+
+" The bundles you install will be listed here
+
+filetype plugin indent on
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -9,6 +25,8 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+set number
+set softtabstop=4 shiftwidth=4 expandtab
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
