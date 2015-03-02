@@ -4,7 +4,7 @@
 
 # Exit bspwm
 alt + shift + q 
-    bspc quit && pkill bar
+    killall bar && killall panel && bspc quit
 
 # reload panel
 alt + q 
@@ -52,7 +52,7 @@ alt + ctrl + {1-9}
 
 # move selected window to selected workspace
 alt + {_,shift + }{1-5}
-    bspc {desktop -f,window -d} {I,II,III,IV,V}
+    bspc {desktop -f,window -d} {Main,Web,VM,Misc}
 
 ~button1
     bspc pointer -g focus
@@ -79,6 +79,14 @@ alt + {comma,period}
 alt + {minus,equal}
     bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 10 ))
 
+# Presel window for splitting
+alt + ctrl + {h,j,k,l}
+    bspc window -p {left,down,up,right}
+
+# Move window into presel position
+alt + shift {a,s,d,f}
+    bspc window -w {left.manual,down.manual,up.manual,right.manual}
+
 #
 # wm independent hotkeys
 #
@@ -100,13 +108,13 @@ super + t
     urxvtc -depth 32 -bg rgba:0D00/1300/1A00/ee00
 
 super + r
-    dmenu_run -nb '#0D131A' -nf '#8A9499' -sb '#1C678C'
+    dmenu_run -nb '#000000' -nf '#8A9499' -sb '#738080' -sf '#0D131A' -fn '-*-GohuFontMod11-*-*-*-*-*-*-*-*-*-*-*-*'
 
 super + l 
-    slock 
+    i3lock -t -i /home/michael/wallpapers/alps.png
 
 super + b
-    google-chrome
+    chromium
 
 super + space
     finder
