@@ -1,0 +1,10 @@
+#!/bin/sh
+
+while true
+do
+    date=`date '+%H:%M:%S'`
+
+    echo "panel_clock$date"
+
+    sleep 1
+done

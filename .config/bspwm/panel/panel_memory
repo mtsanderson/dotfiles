@@ -1,0 +1,11 @@
+#!/bin/sh
+
+while true
+do
+    free=`free -mh | grep Mem | awk '{print $3}'`
+    total=`free -mh | grep Mem | awk '{print $2}'`
+
+    echo "panel_memory$free of $total"
+
+    sleep 1 
+done

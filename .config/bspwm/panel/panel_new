@@ -1,0 +1,32 @@
+#! /bin/sh
+BLACK=#FF0D131A
+RED=#FF802635
+GREEN=#FF608040
+YELLOW=#FF877C43
+BLUE=#FF1C678C
+MAGENTA=#FF684D80
+CYAN=#FF337373
+WHITE=#FF738080
+DARK=#FF0C0C0C
+GREY=#FF7C7B78
+
+clock() {
+    date '+%H:%M'
+}
+
+meminfo() {
+    free=`free -mh | grep Mem | awk '{print $3}'`
+    total=`free -mh | grep Mem | awk '{print $2}'`
+
+    echo "$free of $total"
+}
+
+temp() {
+    python /home/michael/scripts/getweather.py
+}
+
+while true; do
+    echo "%{l}%{F$YELLOW}$(meminfo) %{c}%{F$WHITE}$(clock) %{r}%{F$YELLOW}Temp: $(temp)"
+
+    sleep 1
+done

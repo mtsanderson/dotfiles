@@ -1,0 +1,10 @@
+#!/bin/sh
+
+while true
+do
+    temp=`python /home/michael/scripts/getweather.py`
+
+    echo "panel_weatherTemp: $temp"
+
+    sleep 30
+done

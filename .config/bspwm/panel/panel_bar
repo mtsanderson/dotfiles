@@ -1,0 +1,62 @@
+#! /bin/sh
+BLACK=#FF0D131A
+RED=#FF802635
+GREEN=#FF608040
+YELLOW=#FF877C43
+BLUE=#FF1C678C
+MAGENTA=#FF684D80
+CYAN=#FF337373
+WHITE=#FF738080
+DARK=#FF0C0C0C
+GREY=#FF7C7B78
+
+while read -r line ; do
+    case $line in
+        panel_memory*)
+            #mem info
+            mem_info="%{F$YELLOW}${line#panel_memory}%{F-}"
+            ;;
+        panel_clock*)
+            #clock info
+            clock_info="%{F$WHITE}${line#panel_clock}%{F-}"
+            ;;
+        panel_weather*)
+            #weather info
+            weather_info="%{F$YELLOW}${line#panel_weather}%{F-}"
+            ;;
+        W*)
+            wm_infos=""
+            IFS=':'
+            set -- ${line#?}
+            while [ $# -gt 0 ] ; do
+                item=$1
+                name=${item#?}
+                case $item in
+                    [OFU]*)
+                        # active desktop
+                        wm_infos="$wm_infos %{U$GREEN}%{F$WHITE}%{+u}${name}%{-u}"
+                        ;;
+                    o*)
+                        # inactive but occupied desktop
+                        wm_infos="$wm_infos ${name}"
+                        ;;
+                    f*)
+                        # inactive desktop
+                        wm_infos="$wm_infos %{F$WHITE}${name}%{F-}"
+                        ;;
+                    u*)
+                        # urgent desktop
+                        wm_infos="$wm_infos %{B$RED}${name}%{B-}"
+                        ;;
+                    L*)
+                        # layout
+#                        layout=$(printf "%s" "${name}" | sed 's/\(.\).*/\U\1/')
+                        wm_infos="$wm_infos $layout"
+                        ;;
+                esac
+                shift
+            done
+            ;;
+    esac
+    printf "%s\n" "%{l}$wm_infos %{c}$clock_info %{r}$weather_info"
+done
