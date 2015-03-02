@@ -102,9 +102,11 @@ fi
 
 pathdirs=(
   ~/scripts
+  ~/.config/bspwm/panel
 )
 
-for dir in $pathdirs; do
+for dir in "${pathdirs[@]}"
+do
   if [ -d $dir ]; then
     PATH+=':'$dir
   fi
@@ -118,3 +120,4 @@ export PANEL_FIFO=/tmp/panel-fifo
 if [[ $(tty) = /dev/tty1 ]] && [[ -z "$DISPLAY" ]]; then
   exec startx
 fi
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
