@@ -1,21 +1,34 @@
 " This must be first, because it changes other options as a side effect.
-set nocompatible
-filetype off
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.fzf
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle 'https://github.com/Townk/vim-autoclose'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-" The bundles you install will be listed here
+Plugin 'gmarik/vundle'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'https://github.com/Townk/vim-autoclose'
+Plugin 'fatih/vim-go'
 
-filetype plugin indent on
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
